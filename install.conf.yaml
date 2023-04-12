@@ -1,0 +1,15 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/fish/config.fish:
+        create: true
+        path: fish/config.fish
+        force: true
+    ~/.gitconfig:
+        create: true
+        path: git/gitconfig
+        force: true
