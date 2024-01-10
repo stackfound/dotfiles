@@ -13,3 +13,11 @@
         create: true
         path: git/gitconfig
         force: true
+
+- shell:
+  - brew install fontconfig fish wget
+  - font_url='https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip'; font_name=${font_url##*/}; wget ${font_url} && unzip ${font_name} -d ~/.fonts && fc-cache -fv
+  - curl -sS https://starship.rs/install.sh | sh
+  - brew install ne figlet nodejs npm
+  - echo /opt/homebrew/bin/fish >> /etc/shells
+  - chsh -s /opt/homebrew/bin/fish
